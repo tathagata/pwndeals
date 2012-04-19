@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Bootstrap - shopping cart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<!-- #DEBUG 
+	<meta http-equiv="refresh" content="30">
+-->
+    <!-- Le styles -->
+    <link href="css/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/bootstrap-image-gallery.css">
+    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>`
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+	<script type="text/javascript"   src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<style>
+body {
+    padding-top: 60px;
+    background-image:url('http://wbpreview.com/previews/WB004K715/img/tileable_wood_texture.png') ;
+    
+}
+header {
+    margin-bottom: 30px;
+}
+header h1 {
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+    color: #fff;
+    margin-bottom: 10px;
+}
+header a {
+    color: orange;
+}
+.modal {
+    color: #333;
+}
+
+#start-slideshow{
+-moz-box-shadow: inset 0 0 5px 5px #888;
+-webkit-box-shadow: inset 0 0 5px 5px#888;
+box-shadow: inset 0 0 5px 5px #888;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+padding-left:10px;
+padding-top:10px;
+padding-right:10px;
+padding-bottom:30px;
+background-image:url('http://wbpreview.com/previews/WB004K715/img/tileable_wood_texture.png') ;
+cursor:pointer;
+}
+
+.profile
+{
+transform:rotate(-7deg);
+-ms-transform:rotate(-7deg); /* IE 9 */
+-moz-transform:rotate(-7deg); /* Firefox */
+-webkit-transform:rotate(-7deg); /* Safari and Chrome */
+-o-transform:rotate(-7deg); /* Opera */
+-moz-box-shadow: 0 0 2px 2px #888;
+-webkit-box-shadow: 0 0 2px 2px#888;
+box-shadow:  0 0 2px 2px #888;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+
+}
+
+</style>
+
+  </head>
+
+  <body>
+    <div class="container" style="padding-bottom:100px;">
+		<div class="row"><!-- start header -->
+			<div class="span4 logo">
+			</div>
+		</div><!-- end header -->
+		
+		<div class="row"><!-- start nav -->
+			<div class="span12" id="navspan">
+			  <div class="navbar">
+				<div class="navbar-inner">
+					  <div class="container" style="width: auto;">
+						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						</a>
+						<div class="nav-collapse">
+						  <ul class="nav">
+							  <li class="dropdown">
+							  <a href="index.html" class="dropdown-toggle" data-toggle="dropdown">Xbox <b class="caret"></b></a>
+							  <ul class="dropdown-menu">
+								<li><a href="index.html">Kinect</a></li>
+								<li><a href="index.html">Xbox</a></li>
+								<li class="divider"></li>
+								<li class="nav-header">Accessories</li>
+								<li><a href="index.html">Joystick</a></li>
+								<li><a href="index.html">Speakers</a></li>
+							  </ul>
+							</li>
+							<li><a href="#">Kinects</a></li>
+
+							<li><a href="#">Components</a></li>
+							<li><a href="#">Tablets</a></li>
+							<li class="dropdown">
+							  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mobile<b class="caret"></b></a>
+							  <ul class="dropdown-menu">
+								<li><a href="index.html">Android</a></li>
+								<li><a href="index.html">iOS</a></li>
+								<li><a href="index.html">BlackBerry</a></li>
+								<li class="divider"></li>
+								<li class="nav-header">PC Games</li>
+								<li><a href="index.html">Action & Shooter</a></li>
+								<li><a href="index.html">Adventure</a></li>
+								<li><a href="index.html">Fighting</a></li>
+							  </ul>
+							</li>
+							 <li><a href="index.html">About PwnDeals</a></li>
+						  </ul>
+
+						  <ul class="nav pull-right">
+						   <li class="divider-vertical"></li>
+							<form class="navbar-search" action="">
+								<input type="text" class="search-query span2" placeholder="Search">
+								<button class="btn btn-success btn-small search_btn" type="submit">Go</button>
+							</form>
+							
+						  </ul>
+						</div><!-- /.nav-collapse -->
+					  </div>
+					</div><!-- /navbar-inner -->
+				</div><!-- /navbar -->
+			</div>
+		</div><!-- end nav -->	 
+<div class="span11"  style="-moz-border-radius: 5px;-webkit-border-radius: 5px;-moz-box-shadow: 0 0 5px 5px #888; -webkit-box-shadow: 0 0 5px 5px #888; background-color:#fff;padding-left:60px;padding-bottom:30px;" >
+	<div class="row">
+		<div class="span6 pull-left" style="padding-bottom:30px;"><h1 style="color:#F02A39;font-family: 'Russo One', sans-serif; padding-top:30px;;">PWNDEALS</h1>
+		<p style="color:#000;"><em>Deals on 5 star games. Everyday.</em></p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="span10">
+		<p>
+                        <span style="padding-left:100;font-family: 'Oxygen', sans-serif;" >All of us enjoy playing games - be it Xbox, Wii, Playstation! Heck ... we have even cleared multiple levels Angry Birds in one seating (on the toilet)! With awesome games being released everyday, that's a whole lot of cash!</span> </p><p><span style="padding-left:100;font-family: 'Oxygen', sans-serif;" ><strong>Why isn't there a one stop shop for cheap deals on games?</strong></span></p><p><span style="padding-left:100;font-family: 'Oxygen', sans-serif;" > That's how PWNDEALS was born - a deal on your favourite game, everyday! </span></p>
+                                        <br>
+                                        <br>
+                        </div>
+	</div>
+
+	<div class="row">
+		<div class="span10">
+			<div style="padding-top:30px;padding-bottom:10px;">
+			<h1 style="color:#F02A39; font-family: 'Russo One', sans-serif; padding-bottom:5px;">CEO</h1>
+			<div class="row">
+			<div class="span3" style="color:#000;">
+			<img class="profile" src="https://lh6.googleusercontent.com/-zsUsC_2IzNo/TysmKieJQxI/AAAAAAAAACc/5B1Yr3L9O0k/s410/DJK.jpg" height=150 width=150>
+			</div>
+			<div class="span7">
+			<span style="padding-left:100;"	><strong>David</strong> is probably studying. A gamer at heart, he was born with the gift of finding stealth deals to cut expenses for all his friends. Loves to cook and can talk non-stop at the speed of light!</span>
+					<br>
+					<br> 
+			</div>
+			</div>
+			</div>
+			<br>
+			<div style="padding-top:30px;padding-bottom:10px;">
+			<h1 style="color:#F02A39; font-family: 'Russo One', sans-serif; padding-bottom:5px;">CFO</h1>
+			<div class="row">
+			<div class="span3" style="color:#000;">
+			<img class="profile" src="https://lh5.googleusercontent.com/-Gtlbam-4EXA/Ti303VH9Z9I/AAAAAAAAABQ/plPRkDLj-SU/s304/270599_10150229289036059_635496058_7778845_5898048_n%5B1%5D.jpg" height=150 width=150>
+			</div>
+			<div class="span7">
+			<span style="padding-left:100;"	><strong>Angela</strong> is a finance wizard by day and a pro-gamer after office hours! Typically you would find her in a bright office with sun-glasses on weaving magic in Excel! Otherwise she is rocking hard in Chi-town!</span>
+					<br>
+					<br> 
+			</div>
+			</div>
+			</div>
+			<div style="padding-top:30px;padding-bottom:10px;">
+			<h1 style="color:#F02A39; font-family: 'Russo One', sans-serif; padding-bottom:5px;">CTO</h1>
+			<div class="row">
+			<div class="span3" style="color:#000;">
+			<img class="profile" src="https://lh6.googleusercontent.com/-L_U2IF4EyPU/TkUuB02GkJI/AAAAAAAAA2I/d7IReNob9uw/s265/iCon.jpg" height=150 width=150>
+			</div>
+			<div class="span7">
+			<span style="padding-left:100;"	><strong>T</strong> loves to code and game. You'll find him glued to his computer, or at a tech meetup happening downtown. Follow him on <a href="http://twitter.com/tathagata">Twitter</a></span>
+					<br>
+					<br> 
+			</div>
+			</div>
+			</div>
+
+		</div>
+
+		</div>	
+		
+
+
+		</div>
+			
+	</div>	
+    		<br>
+
+</div> <!-- /container -->
+
+
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Bootstrap - shopping cart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<!-- #DEBUG 
+	<meta http-equiv="refresh" content="30">
+-->
+    <!-- Le styles -->
+    <link href="css/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/bootstrap-image-gallery.css">
+    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>`
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+	<script type="text/javascript"   src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<style>
+body {
+    padding-top: 60px;
+    background-image:url('http://wbpreview.com/previews/WB004K715/img/tileable_wood_texture.png') ;
+    color: #fff;
+}
+header {
+    margin-bottom: 30px;
+}
+header h1 {
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+    color: #fff;
+    margin-bottom: 10px;
+}
+header a {
+    color: orange;
+}
+.modal {
+    color: #333;
+}
+
+#start-slideshow{
+-moz-box-shadow: inset 0 0 5px 5px #888;
+-webkit-box-shadow: inset 0 0 5px 5px#888;
+box-shadow: inset 0 0 5px 5px #888;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+padding-left:10px;
+padding-top:10px;
+padding-right:10px;
+padding-bottom:30px;
+background-image:url('http://wbpreview.com/previews/WB004K715/img/tileable_wood_texture.png') ;
+cursor:pointer;
+}
+
+
+</style>
+
+  </head>
+
+  <body>
+    <div class="container" style="padding-bottom:100px;">
+		<div class="row"><!-- start header -->
+			<div class="span4 logo">
+			</div>
+		</div><!-- end header -->
+		
+		<div class="row"><!-- start nav -->
+			<div class="span12" id="navspan">
+			  <div class="navbar">
+				<div class="navbar-inner">
+					  <div class="container" style="width: auto;">
+						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						</a>
+						<div class="nav-collapse">
+						  <ul class="nav">
+							  <li class="dropdown">
+							  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Xbox <b class="caret"></b></a>
+							  <ul class="dropdown-menu">
+								<li><a href="#">Kinect</a></li>
+								<li><a href="#">Xbox</a></li>
+								<li class="divider"></li>
+								<li class="nav-header">Accessories</li>
+								<li><a href="#">Joystick</a></li>
+								<li><a href="#">Speakers</a></li>
+							  </ul>
+							</li>
+							<li><a href="#">Kinects</a></li>
+
+							<li><a href="#">Components</a></li>
+							<li><a href="#">Tablets</a></li>
+							<li class="dropdown">
+							  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mobile<b class="caret"></b></a>
+							  <ul class="dropdown-menu">
+								<li><a href="#">Android</a></li>
+								<li><a href="#">iOS</a></li>
+								<li><a href="#">BlackBerry</a></li>
+								<li class="divider"></li>
+								<li class="nav-header">PC Games</li>
+								<li><a href="#">Action & Shooter</a></li>
+								<li><a href="#">Adventure</a></li>
+								<li><a href="#">Fighting</a></li>
+							  </ul>
+							</li>
+							 <li><a href="about.html">About PwnDeals</a></li>
+
+						  </ul>
+
+						  <ul class="nav pull-right">
+						   <li class="divider-vertical"></li>
+							<form class="navbar-search" action="">
+								<input type="text" class="search-query span2" placeholder="Search">
+								<button class="btn btn-success btn-small search_btn" type="submit">Go</button>
+							</form>
+							
+						  </ul>
+						</div><!-- /.nav-collapse -->
+					  </div>
+					</div><!-- /navbar-inner -->
+				</div><!-- /navbar -->
+			</div>
+		</div><!-- end nav -->	 
+<div class="span11"  style="-moz-border-radius: 5px;-webkit-border-radius: 5px;-moz-box-shadow: 0 0 5px 5px #888; -webkit-box-shadow: 0 0 5px 5px #888; background-color:#fff;padding-left:60px;padding-bottom:30px;" >
+	<div class="row">
+		<div class="span6 pull-left" style="padding-bottom:30px;"><h1 style="color:#F02A39;font-family: 'Russo One', sans-serif; padding-top:30px;;">PWNDEALS</h1>
+		<p style="color:#000;"><em>Deals on 5 star games. Everyday.</em></p>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="span5">
+			<div style="padding-top:30px;padding-bottom:30px;">
+			<h1 style="color:#000; font-family: 'Oxygen', sans-serif; padding-bottom:10px;">What's game today?</h1>
+			<div class="span5" style="color:#000;">
+			<h1 style="color:#F02A39;font-family: 'Oxygen', sans-serif; padding-top:30px;padding-bottom:30px;">Mario Kart 3</h1>
+			</div>
+			</div>
+			<br>	
+			<br>
+			<br>
+			<div style="color:#000;padding-top:30px;padding-bottom:30px;">
+			<h1 style="color:#000; font-family: 'Oxygen', sans-serif; padding-bottom:10px;">What's the deal today?</h1>
+			<div class="span5">
+			<h1 style="color:#F02A39;font-family: 'Oxygen', sans-serif; padding-top:30px;padding-bottom:30px;">50% OFF!</h1>
+			<address>
+			<strong>Market Price:</strong> <span style="color:#414141">$38</span><br>
+			<strong>PWNDEALS price:</strong> <span style="color:#414141">$19</span><br>
+			<strong>You SAVE:</strong><span style="color:#F02A39;font-family: 'Russo One', sans-serif;font-size:100; padding-top:30px;">$19</span>
+			</br>
+			</address>	
+			</div>
+			</div>
+			<div style="color:#000;padding-top:30px;padding-bottom:30px;">
+			<h1 style="color:#000; font-family: 'Oxygen', sans-serif; padding-bottom:10px;">Seal the Deal!</h1>
+			<img src="http://help.x-cart.com/images/0/0c/Amazon_checkout_button.gif">
+			
+		</div>
+
+		</div>	
+		<div class="span5" id="start-slideshow" data-slideshow="500" data-target="#modal-gallery" data-selector="#gallery a[rel=gallery]">
+		<img src="http://www.pidgi.net/wiki/images/3/31/Mario_alt_-_Mario_Kart_Wii.png" height=700 width=380>
+		</div>
+ 			
+ 
+		<div class="span5 pull-right" style="padding-top:30;">
+			<!-- AddThis Button BEGIN -->
+			<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+				<a class="addthis_button_preferred_1"></a>
+				<a class="addthis_button_preferred_2"></a>
+				<a class="addthis_button_preferred_3"></a>
+				<a class="addthis_button_preferred_4"></a>
+				<a class="addthis_button_compact"></a>
+				<a class="addthis_counter addthis_bubble_style"></a>
+			</div>
+			<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4f8f54464231d52a"></script>
+			<!-- AddThis Button END -->	
+		</div>
+		
+
+
+		<div class="span10" style="padding-right:10px; padding-left:10px; padding-top:30px;">
+			<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+			<script>
+			new TWTR.Widget({
+			  version: 2,
+			  type: 'search',
+			  search: 'mario, mario kart',
+			  interval: 30000,
+			  title: 'Play ON ...',
+			  subject: 'Who else is buying from us',
+			  width: 780,
+			  height: 300,
+			  theme: {
+			    shell: {
+			      background: '#2A2A2A',
+			      color: '#ffffff'
+			    },
+			    tweets: {
+			      background: '#ffffff',
+			      color: '#444444',
+			      links: '#1985b5'
+			    }
+			  },
+			  features: {
+			    scrollbar: false,
+			    loop: false,
+			    live: true,
+			    behavior: 'all'
+			  }
+			}).render().start();
+			</script>
+		</div>
+			
+	</div>	
+    		<br>
+
+</div> <!-- /container -->
+
+    <div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery" style="visibility:hidden"></div>
+<!-- modal-gallery is the modal dialog used for the image gallery -->
+<div id="modal-gallery" class="modal modal-gallery hide fade">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">&times;</a>
+        <h3 class="modal-title"></h3>
+    </div>
+    <div class="modal-body"><div class="modal-image"></div></div>
+    <div class="modal-footer">
+	<img src="http://help.x-cart.com/images/0/0c/Amazon_checkout_button.gif">
+    </div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://blueimp.github.com/cdn/js/bootstrap.min.js"></script>
+<script src="http://blueimp.github.com/JavaScript-Load-Image/load-image.min.js"></script>
+<script src="js/bootstrap-image-gallery.min.js"></script>
+<script>
+/*jslint unparam: true */
+/*global window, document, $ */
+$(function () {
+    'use strict';
+
+    // Start slideshow button:
+    $('#start-slideshow').live('click',function () {
+        var options = $(this).data(),
+            modal = $(options.target),
+            data = modal.data('modal');
+        if (data) {
+            $.extend(data.options, options);
+        } else {
+            options = $.extend(modal.data(), options);
+        }
+        modal.find('.modal-slideshow').find('i')
+            .removeClass('icon-play')
+            .addClass('icon-pause');
+        modal.modal(options);
+    });
+
+
+
+     //Load images from bing image searcp tem
+	$.getJSON(
+		"http://api.bing.net/json.aspx?Image.Count=10&JsonCallback=?",
+		 {
+    			AppId:"FC73C29F84C524731765F16BB16867A663980F16",
+			Query: 'mario kart',
+			Sources: 'Image',
+			Version: '2.0',
+			Market: 'en-us',
+			Adult: 'Moderate',
+			JsonType: 'callback',
+			//JsonCallback: '',
+			//Image.Offset: 0,
+		},
+		function(data){
+		console.log(data);
+		var gallery = $('#gallery'),
+		    url;
+		$.each(data.SearchResponse.Image.Results, function(index, image){
+			$('<a rel="gallery"/>')
+			.prop('href', image.MediaUrl)
+			.prop('title',"50% off! This Craziness is only for TODAY! You don't wanna miss this!")
+			.appendTo(gallery);
+		});
+	});		
+
+});
+</script>
+
+
+
+</body>
+</html>
