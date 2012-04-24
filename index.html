@@ -54,7 +54,15 @@ padding-bottom:30px;
 background-image:url('http://wbpreview.com/previews/WB004K715/img/tileable_wood_texture.png') ;
 cursor:pointer;
 }
+.profile
+{
+-moz-box-shadow: 0 0 2px 2px #888;
+-webkit-box-shadow: 0 0 2px 2px#888;
+box-shadow:  0 0 2px 2px #888;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
 
+}
 
 </style>
 <script type="text/javascript">
@@ -208,7 +216,7 @@ cursor:pointer;
 		</div>
 
 		</div>	
-		<div class="span5" id="start-slideshow" data-slideshow="500" data-target="#modal-gallery" data-selector="#gallery a[rel=gallery]">
+		<div class="span5" id="start-slideshow" data-slideshow="5000" data-target="#modal-gallery" data-selector="#gallery a[rel=gallery]">
 		<img src="http://www.pidgi.net/wiki/images/3/31/Mario_alt_-_Mario_Kart_Wii.png" height=700 width=380>
 		</div>
  			
@@ -230,6 +238,7 @@ cursor:pointer;
 
 
 		<div class="span10" style="padding-right:10px; padding-left:10px; padding-top:30px;">
+		
 			<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
 			<script>
 			new TWTR.Widget({
@@ -261,8 +270,9 @@ cursor:pointer;
 			}).render().start();
 			</script>
 		</div>
-			
-	</div>	
+		<div class="span10" style="padding-top:5px;padding-left:12px;" ><img class="profile" src="img/banner.png" width="775"></div>	
+	</div>
+	
     		<br>
 
 </div> <!-- /container -->
